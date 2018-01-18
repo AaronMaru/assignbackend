@@ -1,0 +1,66 @@
+<section id="main-content" th:fragment="content" xmlns:th="http://www.thymeleaf.org">
+
+    <div class="container">
+        <div class="row">
+            <h1>Customer Management</h1>
+            <div class="row">
+                <h3 class="pull-left"></h3>
+            </div>
+
+            <form class="form-horizontal" th:method="post" th:action="@{/customer/create}" th:object="${customer}">
+                <div class="panel panel-default">
+                    <div class="panel-body form-horizontal payment-form">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label class="col-md-4 control-label" for="id">Customer ID</label>
+                                <div class="col-md-8">
+                                    <p class="form-control-static" id="id" th:text="${customer.customerId}"></p>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="col-md-4 control-label" for="name">Customer Name</label>
+                                <div class="col-md-8">
+                                    <p class="form-control-static" id="name" th:text="${customer.customerName}"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label class="col-md-4 control-label" for="phone">Phone</label>
+                                <div class="col-md-8">
+                                    <p class="form-control-static" id="phone" th:text="${customer.phone}"></p>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="col-md-4 control-label" for="email">Email</label>
+                                <div class="col-md-8">
+                                    <p class="form-control-static" id="email" th:text="${customer.email}"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label class="col-md-4 control-label" for="phone">Added Date</label>
+                                <div class="col-md-8">
+                                    <p class="form-control-static" id="phone" th:text="${customer.createdDate}"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                            <span class="pull-right">
+                                <a th:href="@{/customer/}" class="btn btn-default form-control">Back</a>
+                            </span>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+</section>
